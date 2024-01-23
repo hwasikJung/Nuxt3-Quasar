@@ -1,13 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: {
-    enabled: true // or false to disable
+  devtools: { enabled: true },
+  typescript: {
+    shim: false,
+    typeCheck: true
   },
   modules: [
     'nuxt-quasar-ui',
     '@pinia/nuxt',
     '@nuxtjs/i18n',
-    '@vee-validate/nuxt'
+    '@vee-validate/nuxt',
+    '@vueuse/nuxt'
   ],
   quasar: {
     plugins: ['Notify'],
